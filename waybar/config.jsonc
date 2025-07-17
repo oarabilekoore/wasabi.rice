@@ -1,0 +1,106 @@
+// =====================================================================
+//                          🌶️   W A S A B I   🌶️
+//        This section is HOT. Tweaks ahead with flavor & power.
+//        Yet another based rice. By Oarabile Koore
+//        This work is under MIT. github.com/oarabilekoore/wasabi
+// =====================================================================
+
+{
+    "height": 36,
+    "spacing": 2,
+    "margin-top": 0,
+    "position": "top",
+
+    "modules-left": ["hyprland/workspaces", "custom/verse"],
+    "modules-center": ["clock"],
+    "modules-right": [
+        "pulseaudio",
+        "custom/brightness",
+        "memory",
+        "cpu",
+        "battery",
+        "custom/wifi",
+        "bluetooth"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "Ⅰ",
+            "2": "Ⅱ",
+            "3": "Ⅲ",
+            "4": "Ⅳ",
+            "5": "Ⅴ"
+        },
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4, 5]
+        },
+        "on-click": "hyprctl dispatch workspace {name}"
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": "RAM: {used:0.1f}/{total:0.1f}G"
+    },
+
+    "cpu": {
+        "interval": 3,
+        "format": "CPU: {usage}%"
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "BAT: {capacity}%",
+        "format-charging": "BAT: {capacity}% (charging)",
+        "format-plugged": "BAT: {capacity}% (plugged)",
+        "format-alt": "BAT: {time}"
+    },
+
+    "clock": {
+        "format": "{:%A %H:%M}",
+        "format-alt": "{:%d %B W%V %Y}",
+        "tooltip": false
+    },
+
+    "bluetooth": {
+        "format": "BLE",
+        "tooltip-format": "Bluetooth: {status}",
+        "on-click": "GTK_THEME=Adwaita-dark blueberry"
+    },
+
+    "custom/wifi": {
+        "format": "WIFI",
+        "tooltip": "Open Wi-Fi Manager",
+        "on-click": "nm-connection-editor",
+        "interval": 60
+    },
+    "pulseaudio": {
+        "format": "VOL: {volume}%",
+        "format-muted": "VOL: MUTED",
+        "scroll-step": 5,
+        "tooltip-format": "Playing at {volume}%",
+        "on-click": "GTK_THEME=Adwaita-dark pavucontrol",
+        "on-click-right": "pamixer -t",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+
+    "custom/verse": {
+        "format": "{}",
+        "tooltip": false,
+        "exec-if": "ping -c1 1.1.1.1 > /dev/null 2>&1",
+        "exec": "bun Projects/wasabi/scripts/get-bible-verse.js",
+        "interval": "once"
+    },
+
+    "custom/brightness": {
+        "format": "LIGHT: {}",
+        "tooltip": false,
+        "exec": "~/.config/waybar/scripts/get-brightness.sh",
+        "interval": "once",
+        "signal": 6
+    }
+}
