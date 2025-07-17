@@ -1,10 +1,10 @@
 // =====================================================================
 //                          🌶️   W A S A B I   🌶️
 //        This section is HOT. Tweaks ahead with flavor & power.
-//        This whole config is borrowed from: 
+//        This whole config is borrowed from:
 //        Author: Eduardo de Sá Coêlho Ribeiro Costa
 //        Github: https://github.com/edudscrc
-//        This work is under MIT. github.com/oarabilekoore/wasabi
+//        This work is under MIT. github.com/oarabilekoore/wasabi.rice
 // =====================================================================
 
 
@@ -82,7 +82,7 @@ listview {
 	background-color: @bg-listview;
 	scrollbar: false;
 	border: 0;
-	lines: 4;  
+	lines: 4;
 	padding: 10px;
 }
 
