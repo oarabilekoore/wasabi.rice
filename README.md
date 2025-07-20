@@ -1,12 +1,17 @@
 # Wasabi ARCH HYPERLAND RICE
 
-A spicy, modern Hyprland rice for Arch Linux featuring a clean gruvbox inspired aesthetic with powerful functionality.
+A spicy, modern Hyprland ric
 
 ## Mentions
 
 Rofi GruvBox Theme Provided and Sourced From:
 - Author: Eduardo de Sá Coêlho Ribeiro Costa
 - Github: https://github.com/edudscrc
+
+## Demo
+
+[![Watch the video](https://img.youtube.com/vi/I7IobnhJv-I/0.jpg)](https://youtu.be/I7IobnhJv-I)
+
 
 ## 📦 Components
 
